@@ -1,0 +1,153 @@
+ * {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    border: 2px solid black;
+    margin: 20px;
+    padding: 2rem;
+    max-width: 1280px;
+}
+.logo {
+    border: 2px solid black;  
+    width: 160px;
+    padding: 1rem;
+}
+nav {
+    border: 2px solid black;  
+    padding: 1rem;
+    margin-top: 10px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav li{
+    padding-left: 2%;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+#burger {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    [for=burger] {
+        color: blue;
+        font-size: 50px ;
+    }
+   
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: rgba(0, 128, 0, 0.89);
+        padding: 10px;
+        width: 50%;
+        left: 20%;
+    }
+    #burger:checked + label + nav ul{
+        display: flex;
+    }
+}
+ 
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    nav ul {
+        display: none;
+    }
+    main{
+        display: flex;
+    }
+  }
+ 
+@media only screen and (min-width: 1025px) and (max-width: 1900px) {
+    #burger, [for=burger] {
+        display: none;
+    }
+    .list{
+        display: none;
+    }
+}
+main{
+    border: 2px solid black;  
+    padding: 1rem;
+    margin-top: 10px; 
+}
+section{
+    border: 2px solid black;  
+    padding: 1rem;
+    margin-top: 10px; 
+}
+.list{
+    border: 2px solid black;  
+    padding: 1rem;
+    margin-top: 10px; 
+}
+
+section img{
+    width: 100%;
+}
+aside img {
+    width: 70px;
+    height: 70px;
+    margin: 2px;
+} 
+.humburger{
+    background-color: gray;
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+.l1, .l2, .l3 {
+position: absolute;
+display: block;
+margin: auto;
+height: 20px;
+background-color: antiquewhite;
+left: 15%;
+top: 48%;
+transition: all .2s ease-in-out;
+
+}
+.l1{
+    top: 23%;
+
+}
+.l3{
+    top: 73%;
+}
+.humburger:active .l1{
+    transform: rotate(45deg);
+    top: 48px;
+}
+.humburger:active .l3{
+    transform: rotate(-45deg);
+    top: 48px;
+}
+.humburger:active .l2{
+    opacity: 0;
+} 
+
+.container{
+    display: flex;
+    width: 600ppx;
+}
+.foto{
+    height: 300px;
+    width: auto;
+    overflow: hidden;
+    flex: 1;
+    transition: all .2s ease;
+}
+.foto img{
+    height: 100%;
+}
+.foto:hover{
+    flex: 2;
+}
